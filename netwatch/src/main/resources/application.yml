@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: netmonitor
+  datasource:
+    url: jdbc:postgresql://localhost:5432/netwatch
+    username: netwatch
+    password: netwatch
+  jpa:
+    hibernate:
+      ddl_auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+monitor:
+  ping:
+    timeout-ms: 2000 # tempo máximo de espera pela resposta do ping
+  warning-latency-ms: 200 # acima disso o dispositivo fica em WARNING
